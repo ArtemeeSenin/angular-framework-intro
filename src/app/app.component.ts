@@ -8,4 +8,12 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'angular learning';
   user = 'Artemee';
+  elements: number[] = [];
+
+  changeName() {
+    this.user = 'New Artemee';
+  }
+  addElement() {
+    this.elements.push(this.elements.length + 1);
+  }
 }
