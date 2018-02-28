@@ -1,4 +1,3 @@
-<!--The content below is only a placeholder and can be replaced.-->
 <div>
   <h1 style="text-align:center">
     Welcome to {{ title }}, {{ user }}!
@@ -8,9 +7,10 @@
   <h2 style="text-align:center">Hobbies</h2>
   <button (click)="addElement()">New hobbie</button>
   <ul>
-    <li 
+    <li
       *ngFor="let el of elements"
       [id]="'elem-'+el"
+      [ngStyle]="{'background-color': getColor(el)}"
     >Element {{ el }}</li>
   </ul>
 </div>

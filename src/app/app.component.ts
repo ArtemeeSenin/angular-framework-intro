@@ -16,4 +16,8 @@ export class AppComponent {
   addElement() {
     this.elements.push(this.elements.length + 1);
   }
+
+  getColor(element) {
+    return element % 2 === 0 ? 'green' : 'red';
+  }
 }
