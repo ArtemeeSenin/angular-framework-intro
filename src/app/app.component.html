@@ -3,5 +3,10 @@
   <h1>
     Welcome to {{ title }}!
   </h1>
-  <app-user></app-user>
+  <div>
+    <a routerLink="/">Home</a> 
+    <a routerLink="/blog">Blog</a> 
+    <a routerLink="/account">Account</a> 
+  </div>
+  <router-outlet></router-outlet>
 </div>
