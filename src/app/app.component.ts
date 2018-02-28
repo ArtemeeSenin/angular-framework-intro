@@ -9,15 +9,20 @@ export class AppComponent {
   title = 'angular learning';
   user = 'Artemee';
   elements: number[] = [];
+  message = '';
 
   changeName() {
-    this.user = 'New Artemee';
+    this.user = 'new Artemee';
   }
   addElement() {
     this.elements.push(this.elements.length + 1);
   }
 
-  getColor(element) {
+  getColor(element: number) {
     return element % 2 === 0 ? 'green' : 'red';
+  }
+
+  userWasClicked(userName: string) {
+    alert(userName);
   }
 }

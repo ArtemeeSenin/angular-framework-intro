@@ -1,17 +1,17 @@
-<div>
-  <h1 style="text-align:center">
-    Welcome to {{ title }}, {{ user }}!
-  </h1>
-  <p *ngIf="user != 'Artemee'">Name updated!</p>
-  <button (click)="changeName()">Change name</button>
-  <h2 style="text-align:center">Hobbies</h2>
-  <button (click)="addElement()">New hobbie</button>
-  <ul>
-    <li
-      *ngFor="let el of elements"
-      [id]="'elem-'+el"
-      [ngStyle]="{'background-color': getColor(el)}"
-    >Element {{ el }}</li>
-  </ul>
-</div>
-
+<h1 style="text-align:center" [ngClass]="{updated: user !== 'Artemee'}">
+  Welcome to {{ title }}, {{ user }}!
+</h1>
+<app-username [username]="'Max'" (userClicked)="userWasClicked($event)"></app-username>
+<p *ngIf="user != 'Artemee'">Name updated!</p>
+<button (click)="changeName()">Change name</button>
+<h2 style="text-align:center">Hobbies</h2>
+<button (click)="addElement()">New hobbie</button>
+<ul>
+  <li
+    *ngFor="let el of elements"
+    [id]="'elem-'+el"
+    [ngStyle]="{'background-color': getColor(el)}"
+  >Element {{ el }}</li>
+</ul>
+<input type="text" [(ngModel)]="message">
+<p>{{ message }}</p>
