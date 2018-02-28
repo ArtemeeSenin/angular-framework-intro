@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
+import { HobbyComponent } from './hobby/hobby.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HobbyComponent
   ],
   imports: [
     BrowserModule,
