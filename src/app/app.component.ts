@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   hobbies: string[] = ['Music', 'Reading'];
+  newHobbyInput = '';
+
+  addNewHobby() {
+    this.hobbies.push(this.newHobbyInput);
+  }
 }

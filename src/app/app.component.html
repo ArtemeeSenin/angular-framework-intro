@@ -1,6 +1,6 @@
 <ul>
   <li *ngFor="let hobby of hobbies">{{ hobby }}</li>
 </ul>
-<input type="text">
-<button>New hobby</button>
+<input type="text" [(ngModel)]="newHobbyInput">
+<button (click)="addNewHobby()">New hobby</button>
 
